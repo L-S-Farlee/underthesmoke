@@ -1,0 +1,685 @@
+.dial {
+	display: inline-block;
+	border-radius: 50%;
+	z-index: 11;
+	margin: 10px;
+	padding:0;
+	background: #222222;
+	width: 90px;
+	white-space : nowrap; 
+	user-select: none;
+}
+
+.button {
+	text-align: center;
+	background-color: #333333;
+	border-radius: 20%;
+	width: 90px;
+	height: 100%;
+	padding: 0;
+	margin: auto;
+}
+
+.button p {
+	text-align: center;
+	margin: auto;
+	font-weight: bold;
+}
+
+.num {
+	padding: 0em;
+}
+
+.num p {
+	text-align: center;
+	margin: auto;
+	display: block;
+	height: 100%;
+	width: 100%;
+	vertical-align: top;
+	font-weight: bold;
+}
+
+.puzzle {
+	position: absolute;
+	text-align: center;
+	background-color: #000000;
+	justify-content: center;
+	height: 200vh;
+	width: 100vw;
+	z-index: 10;
+	opacity: 1;
+	transition: z-index 3s step-end, opacity 3s ease-in, height 3s step-end;
+	flex-direction: column;
+	white-space : nowrap; 
+	
+}
+
+.puzzle.change {
+	opacity: 0;
+	z-index: -1000;
+	height: 100vh;
+	
+}
+
+@keyframes zChange {
+	from {z-index: 10;}
+	to {z-index: -1000;}
+}
+
+#puzzleBox {
+	text-align: center;
+	width: 100%;
+	height: 30%;
+	min-height: 30%;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+}
+
+#puzzlePoem {
+	white-space: normal;
+	vertical-align: top;
+	text-align: center;
+	margin: auto;
+	padding: 0;
+	width: 100%;
+	display: block;
+	background-color: #000;
+}
+
+#puzzlePoemTitle {
+	white-space: normal;
+	vertical-align: top;
+	margin: auto;
+	display: block;
+	background-color: #000;
+}
+
+hr {
+    overflow: visible; /* For IE */
+	width: 60%;
+    margin: auto;
+	padding: 0;
+	border-radius: 10%;
+    border: 0;
+    border-top: medium double #BBB;
+    color: #BBBBBB;
+    text-align: center;
+}
+
+hr:after {
+    content: "\\ | /";
+	height: .8em;
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 .6em;
+	background-color: #000;
+	font-family: 'IM Fell Great Primer SC', serif;
+	border-radius: 110%;
+}
+
+#hint {
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1.3em;
+	letter-spacing: .2em;
+	font-weight: bold;
+	font-style: normal;
+	padding: .5em;
+}
+
+#puzzlePoemText {
+	text-align: center;
+	margin: 0 auto;
+	letter-spacing: .1em;
+	font-style: italic;
+	padding: 1em;
+}
+
+h1 {
+	text-align: center;
+	letter-spacing: .25em;
+	font-size: 2.9em;
+	padding: 1em;
+	margin: 0;
+	font-family: 'IM Fell Great Primer SC', serif;
+	font-weight: bold;
+}
+
+h2 {
+	text-align: center;
+	letter-spacing: .25em;
+	font-size: 2.9em;
+	background-color: #181818;
+	padding: 2rem 0 .8rem 0;
+	margin: 0;
+	font-family: 'IM Fell Great Primer SC', serif;
+	font-weight: bold;
+	border-top: 12px double #222222;
+}
+
+h4 {
+	text-align: center;
+	letter-spacing: .15em;
+	font-size: 1.8em;
+	padding: 0.8rem 0 2.2rem 0;
+	background-color: #181818;
+	border-bottom: 12px double #222222;
+	font-family: 'IM Fell Great Primer SC', serif;
+	font-weight: normal;
+	margin: 0;
+}
+
+p {
+	display: block;
+	font-size: 1.2em;
+	text-align: left;
+	font-family: 'Amiri', serif;
+	padding: 1em 0 1em 0;
+	width: 85%;
+	margin: auto;
+}
+
+.primaryImg {
+	display: block;
+	margin: auto;
+	padding: 4em 0em 4em 0em;
+	max-width: 85%;
+	height: auto;
+}
+
+.pagewrap {
+	width: 74%;
+	height: 100%;
+	min-height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	background-color: #222222;
+}
+
+.pagewrapPoems {
+	width: 60%;
+	height: 100%;
+	min-height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	background-color: #222222;
+}
+
+body {
+	background-color: #000000;
+	background-image: url(images/downtown1956.jpg);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size: auto;
+	background-position: left;
+	color: #f6efe8;
+	padding: 0;
+	margin: 0;
+}
+
+#bioBG {
+	background-position: top;
+}
+
+#poemsBG {
+	background-position: bottom;
+}
+
+#chicagoBG {
+	background-position: right; 
+}
+
+#aboutBG {
+	background-position: center;
+}
+
+nav {
+	display: block;
+    list-style:none;
+    text-align:center;
+	margin: auto;
+	padding: 3em 0 3em 0;
+	background-color: #181818;
+	width: 100%;
+}
+
+nav ul {
+	margin: auto;
+	width: 100%;
+	padding: 0;
+}
+
+nav li {
+	font-size: 1.05rem;
+	font-weight: bold;
+	font-family: 'Amiri', sans-serif;
+	line-height: 40px;
+	margin: 0 2% 0 2%;
+	width: 180px;
+	display: inline-block;
+	padding: .8em 0 .8em 0;
+	border-radius: 25%;
+	border-width: 5px;
+	border-top-color: #555;
+	border-bottom-color: #444;
+	border-style: solid none;
+}
+
+nav a {
+	letter-spacing: .20em;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	transition: .3s background-image;
+}
+
+nav li:hover {
+  background-color: #444444;
+  color: #DDDDDD;
+}
+
+nav li:active {
+  background-color: #777777;
+  color: #FFFFFF;
+}
+
+main {
+	padding: 5em 0 2.5em 0;
+}
+
+footer {
+	text-align: center;
+	letter-spacing: .2em;
+	font-size: 1em;
+	font-family: 'Amiri', sans-serif;
+	font-weight: bold;
+	padding: 2.5em 0 1em 0;
+	margin: 2em auto 0 auto;
+	background-color: #191919;
+	line-height: 5em;
+}
+
+footer a {
+	color: #FFF;
+	text-transform: uppercase;
+	letter-spacing: .3em;
+}
+
+footer a:hover {
+	color: #999;
+}
+
+footer p {
+	text-align: center;
+	line-height: 1.2em;
+	font-size: 1em;
+	letter-spacing: .3em;
+}
+
+
+#userSuggestions {
+	text-align: center;
+	margin: auto;
+	padding: 0 0 0 0;
+}
+
+#userMessage {
+	width: 100%;
+	text-align: center;
+	font-size: 1.2em;
+	display: inline-block;
+	margin: auto auto;
+	padding: 0;
+	font-family: "Courier New", Courier, monospace;
+	letter-spacing: 0em;
+}
+
+#userMessage p {
+	text-align: center;
+	padding: .7em;
+	margin: 1em auto;
+	font-size: 1.3em;
+	letter-spacing: 0.05em;
+	font-family: 'Amiri', sans-serif;
+	background-color: #181818;
+}
+
+#userMessage fieldset {
+	border: none;
+}
+
+#userSuggestions label {
+	height: 50px;
+}
+
+#emailTxtBox {
+	color: #FFF;
+	background-color: #131313;
+	text-align: center;
+	max-width: 350px;
+	width: 80%;
+	font-size: 1em;
+	letter-spacing: 0.05em;
+	border-color: #888;
+	border-radius: 5px;
+	border-style: outset;
+	padding: .5em;
+	margin: 20px;
+	font-family: 'Amiri', sans-serif;
+}
+
+#txtbox {
+	color: #FFF;
+	background-color: #141414;
+	height: 200px;
+	max-width: 500px;
+	width: 70%;
+	font-size: 1em;
+	letter-spacing: .05rem;
+	border-color: #666;
+	border-width: 5px;
+	border-radius: 5px;
+	border-style: outset;
+	padding: 1.3em;
+	margin: 20px;
+	font-family: 'Amiri', sans-serif;
+}
+
+#txtbox_s {
+	color: #FFF;
+	background-color: #131313;
+	max-width: 150px;
+	font-size:1.2rem;
+	letter-spacing: 0.15em;
+	font-weight: bold;
+	border-color: #888;
+	border-radius: 5px;
+	border-style: outset;
+	padding: .5em;
+	margin: 1em 0 0 0;
+	font-family: 'Amiri', sans-serif;
+}
+
+#txtbox_s:active {
+	background-color: #333;
+}
+
+#formSuccess {
+	padding: 3em 0 0 0;
+	text-align: center;
+}
+
+a {
+	color: #FFF;
+	letter-spacing: .1em;
+}
+
+.inTextLink {
+	letter-spacing: 0em;
+}
+
+#webSecurity {
+	width: 100%;
+}
+
+#webSecurity h4 {
+	background-color: #181818;
+	padding: 1.5em;
+}
+
+#webSecurityInfo {
+	text-align: center;
+	color: #FFF;
+	font-size: 1.2em;
+	padding: 1em;
+	font-family: 'Amiri', sans-serif;
+}
+
+#timeElapsed {
+	text-align: center;
+	margin: auto;
+	margin-top: 25px;
+	width: 100%;
+}
+
+#timeElapsed h4 {
+	background-color: #181818;
+	padding: 1.5em;
+}
+
+#timeElapsed p {
+	text-align: center;
+}
+
+#dateSelect {
+	color: #FFF;
+	text-align: center;
+	background-color: #181818;
+	max-width: 200px;
+	font-size:1em;
+	letter-spacing: 0.25em;
+	border: none;
+	text-transform: uppercase;
+	padding: 1.2em;
+	margin: 1em;
+	font-family: "Courier New", Courier, monospace;
+}
+
+#timeButton {
+	color: #FFF;
+	background-color: #131313;
+	max-width: 150px;
+	font-size:1em;
+	letter-spacing: 0.15em;
+	border-color: #888;
+	border-radius: 5px;
+	border-style: outset;
+	padding: .5em;
+	margin: 1em 0 0 0;
+	font-family: 'Amiri', sans-serif;
+}
+
+#timeResult{
+	max-width: 600px;
+	width: auto;
+	margin: auto;
+}
+
+#timeResult p{
+	text-align: left;
+	text-transform: uppercase;
+	line-height: 1.3em;
+	letter-spacing: .2em;
+	font-size: 1em;
+	font-family: 'Amiri', sans-serif;
+	padding-left: 10em;
+	margin: auto;
+}
+
+#checkList {
+	display: none;
+	text-align: center;
+	margin: auto auto;
+	width: auto;
+}
+
+#checkListAlign {
+	margin: auto;
+	max-width: 270px;
+}
+
+#checkList fieldset{
+	text-align: left;
+	text-transform: uppercase;
+	line-height: 1.3em;
+	letter-spacing: .2em;
+	font-size: 1em;
+	font-family: 'Amiri', sans-serif;\
+	margin: auto;
+	padding: 0;
+}
+
+#geoMap {
+	display: none;
+	width: 700px;
+	height: 400px;
+	margin: auto;
+}
+
+#map {
+	margin: auto;
+	padding-top: 2em;
+	text-align: center;
+	width: 100%;
+}
+
+#mapBtn {
+	text-align: center;
+	color: #FFF;
+	background-color: #131313;
+	max-width: 450px;
+	font-size: 1.2em;
+	letter-spacing: 0.05em;
+	border-color: #888;
+	border-radius: 5px;
+	border-style: outset;
+	padding: .5em;
+	margin: auto;
+	margin-bottom: 25px;
+	font-family: 'Amiri', sans-serif;
+}
+
+#mapStatus {
+	text-align: center;
+}
+
+#poemList {
+	padding-top: 2em;
+	text-align: center;
+}
+
+#poemList a {
+	line-height: 3;
+	margin-top: 1.2em;
+	font-family: 'Amiri', sans-serif;
+	text-decoration: none;
+	font-family: 'IM Fell Great Primer SC', serif;
+	font-size: 1.8em;
+	border-bottom: 1px solid #999;
+}
+
+.poemHeader {
+	padding: .4em 0 0 0 ;
+}
+
+.poemText {
+	padding: 4em 2em 1em 4em;
+	text-align: center;
+	margin: auto;
+}
+
+.poemText p {
+	display: inline-block;
+	text-align: left;
+	width: auto;
+	max-width: 70%;
+	margin: auto;
+	line-height: 1.8rem;
+	font-size: 1.3rem;
+	padding: 0 1em 0 1.5em;
+}
+
+.bioHeaders {
+	font-size: 1.7rem;
+}
+
+#bioText p {
+	width: 60%;
+	letter-spacing: .0em;
+}
+
+#quoteName {
+	font-size: 1.1rem;
+	text-align: center;
+	padding-top: 0;
+	text-transform: uppercase;
+	letter-spacing: .22em;
+}
+
+#imageGallery {
+	display: block;
+	text-align: center;
+	margin: auto;
+	padding: 40px 0 40px 0;
+	width: 100%;
+	height: 100%;
+	user-select: none;
+}
+
+#imgGallery {
+	display: inline-block;
+	vertical-align: middle;
+	margin: auto 15px auto 15px;
+	max-width: 500px;
+}
+
+.buttonGallery {
+	display: inline-block;
+	background-color: #333;
+	border-radius: 15%;
+	vertical-align: middle;
+	margin: auto;
+	width: 50px;
+	height: 90px;
+	padding: 0;
+}
+
+.buttonGallery span {
+	display: block;
+	margin: auto;
+	padding-top: 18px;
+	height: 60px;
+	font-size: 3em;
+	font-family: 'Courier New', monospace;
+	
+}
+
+@media only screen and (max-width: 1200px) {
+
+	.pagewrap {
+		width: 100%;
+	}
+	
+	.pagewrapPoems {
+		width: 100%;
+	}
+	
+	nav {
+		padding: 1em;
+	}
+	
+	nav li {
+		margin: 1.2em auto 1.2em auto;
+		display: block;
+		width: 200px;
+	}
+	
+	.poemText {
+		padding: 4em 0 1em 0;
+	}
+	
+	.poemText p {
+		padding: 0;
+		max-width: 90%;
+	}
+
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Under the Smoke | About</title>
+		<link rel="stylesheet" href="sandburg.css" />
+		<link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer+SC&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
+		<script src="modernizr.custom.05819.js"></script>
+	</head>
+	<body id="aboutBG">
+		<div class="pagewrap">
+		
+		<nav>
+		  <ul>
+		      <li>
+		         <a href="index.html">Introduction</a>
+		      </li>
+			  
+			  <li>
+		         <a href="poems.html">The Poems</a>
+			  </li>
+			  
+			  <li>
+		         <a href="bio.html">The Poet</a>
+			  </li>
+			  
+			  <li>
+				 <a href="chicago.html">The City</a>
+			  </li>
+		  </ul>
+	    </nav>
+		
+		
+
+		<main>
+			<header id="aboutHeader">
+				<h2>About & Contact</h2>
+				<h4>[Miscellania]</h4>
+			</header>
+			
+			<img src="images\wabashAve.jpg" class="primaryImg" />
+			
+			<p>
+			Under the Smoke is a student project website designed as a tribute for the poet and author Carl Sandburg. This website uses public domain photographs of early 20th century Chicago in combination with the poetry of Carl Sandburg. The purpose of this website is to educate on a great American poet and the city he wrote of.
+			<br /><br />If you have any comments or suggestions for this website, please use the form below to submit your thoughts.
+			</p>
+			
+			
+			
+			<div id="userMessage">
+				<p>What kind of message is this?</p>
+				<fieldset>
+				<input type="radio" id="radioComment" value="radioComment"  name="radioB">
+				<label for="radioComment">Comment / Suggestion</label>
+				<input type="radio" id="radioError" value="radioError" name="radioB">
+				<label for="radioError">Error / Technical</label><br />
+				
+				<div id="checkList">
+					<p>Which pages are broken?</p>
+					<fieldset>
+						<div id="checkListAlign">
+						<input type="checkbox" id="introPage" name="introPage" value="Introduction">
+						<label for="introPage">Introduction</label><br>
+						<input type="checkbox" id="poemsPage" name="poemsPage" value="The Poems">
+						<label for="poemsPage">The Poems</label><br>
+						<input type="checkbox" id="poetPage" name="poetPage" value="The Poet">
+						<label for="poetPage">The Poet</label><br>
+						<input type="checkbox" id="cityPage" name="cityPage" value="The City">
+						<label for="cityPage">The City</label><br>
+						<input type="checkbox" id="aboutPage" name="aboutPage" value="About/Contact">
+						<label for="aboutPage">About / Contact</label><br>
+						</div>
+					</fieldset>
+				</div>
+				
+				</fieldset>
+				
+				<p>Enter your email (optional) and message below.</p>
+				<form id="userSuggestions">
+					<label for="emailTxtBox">Email</label><br>
+					<input type="text" id="emailTxtBox" placeholder="Enter email here (optional)."><br>
+					<label for="txtbox" class="labelAbove">Message</label><br>
+					<textarea id="txtbox" name="comment" form="suggestions" placeholder="Enter message here."></textarea><br>
+					<input id="txtbox_s" type="button" value="SUBMIT">
+				</form>
+				
+			</div>
+			
+			<div id="webSecurity">
+				<p id="formSuccess"></p>
+				
+				<h4>Web Security</h4>
+				<p>
+				This website is committed to ensuring your security and privacy as a visitor to this website. However, not all websites will.
+				It's important to educate yourself on internet safety. There are an enormous number of ways that a malicious website, email, or program could target you.
+				<br><br>
+				For example, here's what this website (which isn't trying to track or analyze your data) can know about your computer and browser:
+				</p>
+				<p id="webSecurityInfo"></p>
+				
+				<p>To see what a website can know about your location (if you let them), click the button below.</p>
+				
+				<div id="map">
+					<input type="button" id="mapBtn" value="Click here! (Geolocation)">
+					<div id="geoMap"></div>
+					<p id="mapStatus"></p>
+				</div>
+				
+				<p>This shouldn't be surpising to you, and if it is you should know that much, much worse threats exist. I recommend the following articles to learn more about this topic: </p>
+				
+				<p><a href="https://usa.kaspersky.com/resource-center/preemptive-safety/top-10-internet-safety-rules-and-what-not-to-do-online" target="blank">10 Internet Safety Rules, by Kaspersky</a><br /> 
+				A very basic and quick intro to some of the things you should know about web security.</p>
+				
+				<p><a href="https://www.zdnet.com/article/online-security-101-how-to-protect-your-privacy-from-hackers-spies-and-the-government/" target="blank">CyberSecurity 101, by ZDNet</a><br /> 
+				A more detailed coverage of important web security tools, covering TOR, VPNs, and other important topics.</p>
+				
+				<p><a href="https://www.privacypolicies.com/blog/cookies/" target="blank">Browser Cookies Explained, by privacypolicies.com</a><br />
+				A detailed explanation of what cookies are, and how they affect you.</p>
+			</div>
+			
+			<div id="timeElapsed">
+				<h4>Time Elapsed</h4>
+				<p>Carl Sandburg was born on January 6th, 1878 and died on July 22, 1967.<br>Enter these dates (or any date you choose) to see the days that have elapsed since these events.</p>
+				<input id="dateSelect" type="date"><br>
+				<input id="timeButton" type="button" value="CALCULATE">
+				<div id="timeResult"><p id="timeResultPara"></p></div>
+			</div>
+			
+		</main>
+
+		<footer>
+			<a href="about.html" id="about">About & Contact</a>
+			<p>&copy; 2020 <br /> LS FARLEE</p>
+		</footer>
+		</div>
+
+	<script src="geoMap.js"></script>
+	<script src="suggestionform.js"></script>
+	<script src="browserInfo.js"></script>
+	<script src="timeScript.js"></script>
+	</body>
+</html>
