@@ -5,7 +5,9 @@
 	margin: 10px;
 	padding:0;
 	background: #222222;
-	width: 90px;
+	max-width: 70px;
+	width: 8%;
+	min-width: 40px;
 	white-space : nowrap; 
 	user-select: none;
 }
@@ -14,7 +16,7 @@
 	text-align: center;
 	background-color: #333333;
 	border-radius: 20%;
-	width: 90px;
+	width: 100%;
 	height: 100%;
 	padding: 0;
 	margin: auto;
@@ -40,13 +42,19 @@
 	font-weight: bold;
 }
 
+.puzzleWrap {
+	height: 100%;
+}
+
 .puzzle {
 	position: absolute;
 	text-align: center;
 	background-color: #000000;
 	justify-content: center;
-	height: 200vh;
-	width: 100vw;
+	height: 300%;
+	width: 100%;
+	bottom: auto;
+	overflow: hidden;
 	z-index: 10;
 	opacity: 1;
 	transition: z-index 3s step-end, opacity 3s ease-in, height 3s step-end;
@@ -70,8 +78,6 @@
 #puzzleBox {
 	text-align: center;
 	width: 100%;
-	height: 30%;
-	min-height: 30%;
 	justify-content: center;
 	padding: 0;
 	margin: 0;
@@ -195,10 +201,7 @@ p {
 	width: 74%;
 	height: 100%;
 	min-height: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 0;
-	margin-bottom: 0;
+	margin: 0 auto;
 	background-color: #222222;
 }
 
@@ -223,6 +226,7 @@ body {
 	color: #f6efe8;
 	padding: 0;
 	margin: 0;
+	overflow-x: hidden;
 }
 
 #bioBG {
@@ -248,7 +252,6 @@ nav {
 	margin: auto;
 	padding: 3em 0 3em 0;
 	background-color: #181818;
-	width: 100%;
 }
 
 nav ul {
@@ -262,10 +265,11 @@ nav li {
 	font-weight: bold;
 	font-family: 'Amiri', sans-serif;
 	line-height: 40px;
-	margin: 0 2% 0 2%;
-	width: 180px;
+	margin: 0 1em 0 1em;
+	width: 20%;
+	max-width: 95%;
 	display: inline-block;
-	padding: .8em 0 .8em 0;
+	padding: .5em 0 .5em 0;
 	border-radius: 25%;
 	border-width: 5px;
 	border-top-color: #555;
@@ -294,6 +298,7 @@ nav li:active {
 
 main {
 	padding: 5em 0 2.5em 0;
+	overflow-x: hidden;
 }
 
 footer {
@@ -365,15 +370,14 @@ footer p {
 	color: #FFF;
 	background-color: #131313;
 	text-align: center;
-	max-width: 350px;
-	width: 80%;
+	width: 45%;
 	font-size: 1em;
 	letter-spacing: 0.05em;
 	border-color: #888;
 	border-radius: 5px;
 	border-style: outset;
 	padding: .5em;
-	margin: 20px;
+	margin: 3%;
 	font-family: 'Amiri', sans-serif;
 }
 
@@ -381,8 +385,7 @@ footer p {
 	color: #FFF;
 	background-color: #141414;
 	height: 200px;
-	max-width: 500px;
-	width: 70%;
+	width: 60%;
 	font-size: 1em;
 	letter-spacing: .05rem;
 	border-color: #666;
@@ -397,7 +400,8 @@ footer p {
 #txtbox_s {
 	color: #FFF;
 	background-color: #131313;
-	max-width: 150px;
+	width: 150px;
+	max-width: 95%;
 	font-size:1.2rem;
 	letter-spacing: 0.15em;
 	font-weight: bold;
@@ -464,7 +468,8 @@ a {
 	color: #FFF;
 	text-align: center;
 	background-color: #181818;
-	max-width: 200px;
+	width: 200px;
+	max-width: 95%;
 	font-size:1em;
 	letter-spacing: 0.25em;
 	border: none;
@@ -477,7 +482,8 @@ a {
 #timeButton {
 	color: #FFF;
 	background-color: #131313;
-	max-width: 150px;
+	width: 150px;
+	max-width: 95%;
 	font-size:1em;
 	letter-spacing: 0.15em;
 	border-color: #888;
@@ -489,19 +495,18 @@ a {
 }
 
 #timeResult{
-	max-width: 600px;
-	width: auto;
+	width: 300px;
+	max-width: 95%;
 	margin: auto;
 }
 
 #timeResult p{
-	text-align: left;
+	text-align: c;
 	text-transform: uppercase;
 	line-height: 1.3em;
 	letter-spacing: .2em;
 	font-size: 1em;
 	font-family: 'Amiri', sans-serif;
-	padding-left: 10em;
 	margin: auto;
 }
 
@@ -531,6 +536,7 @@ a {
 #geoMap {
 	display: none;
 	width: 700px;
+	max-width: 95%;
 	height: 400px;
 	margin: auto;
 }
@@ -546,7 +552,8 @@ a {
 	text-align: center;
 	color: #FFF;
 	background-color: #131313;
-	max-width: 450px;
+	width: 450px;
+	max-width: 95%;
 	font-size: 1.2em;
 	letter-spacing: 0.05em;
 	border-color: #888;
@@ -628,8 +635,9 @@ a {
 #imgGallery {
 	display: inline-block;
 	vertical-align: middle;
-	margin: auto 15px auto 15px;
-	max-width: 500px;
+	margin: 3%;
+	width: 500px;
+	max-width: 95%;
 }
 
 .buttonGallery {
@@ -637,7 +645,6 @@ a {
 	background-color: #333;
 	border-radius: 15%;
 	vertical-align: middle;
-	margin: auto;
 	width: 50px;
 	height: 90px;
 	padding: 0;
@@ -663,6 +670,10 @@ a {
 		width: 100%;
 	}
 	
+	.dial {
+		margin: 0;
+	}
+	
 	nav {
 		padding: 1em;
 	}
@@ -680,6 +691,14 @@ a {
 	.poemText p {
 		padding: 0;
 		max-width: 90%;
+	}
+	
+	#emailTxtBox {
+		width: 70%;
+	}
+	
+	#txtbox {
+		width: 70%;
 	}
 
 }
